@@ -61,6 +61,8 @@ class PasskeysWeb extends PasskeysPlatform {
         clientDataJSON: typedResponse.response.clientDataJSON,
         attestationObject: typedResponse.response.attestationObject,
         transports: typedResponse.response.transports,
+        // TODO: fix me
+        authenticatorData: '',
       );
     } catch (e) {
       final exception = _parseException(e as String);
