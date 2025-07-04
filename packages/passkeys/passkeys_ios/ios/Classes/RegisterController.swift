@@ -36,7 +36,7 @@ class RegisterController: NSObject, ASAuthorizationControllerDelegate, ASAuthori
                 clientDataJSON: credentialRegistration.rawClientDataJSON.toBase64URL(),
                 attestationObject: credentialRegistration.rawAttestationObject!.toBase64URL(),
                 transports: [],
-                authenticatorData: credentialRegistration.rawAuthenticatorData.toBase64URL()
+                authenticatorData: "" // TODO: fix me
             )
             completion?(.success(response))
             break
@@ -65,7 +65,7 @@ class RegisterController: NSObject, ASAuthorizationControllerDelegate, ASAuthori
                 clientDataJSON: securityKeyRegistration.rawClientDataJSON.toBase64URL(),
                 attestationObject: securityKeyRegistration.rawAttestationObject!.toBase64URL(),
                 transports: transportStrings,
-                authenticatorData: securityKeyRegistration.rawAuthenticatorData.toBase64URL()
+                authenticatorData: "" // TODO: fix me
             )
             completion?(.success(response))
             break
